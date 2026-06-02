@@ -34,6 +34,20 @@ pipeline{
                 }
             }
         }
+        // stage('Deploy to EC2') {
+        //     steps {
+        //         sshagent(['ec2-key']) {
+        //     sh '''
+        //     ssh -o StrictHostKeyChecking=no ec2-user@EC2-IP "
+        //     docker pull harshporwal01/nginx-app:latest &&
+        //     docker stop nginx-container || true &&
+        //     docker rm nginx-container || true &&
+        //     docker run -d --name nginx-container -p 80:80 harshporwal01/nginx-app:latest
+        //     "
+        //     '''
+        //         }
+        //     }
+        // }
     }
     post{
         always{
