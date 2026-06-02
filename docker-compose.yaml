@@ -1,0 +1,16 @@
+
+services:
+  flask-app:
+    image: harshporwal01/flask-app:latest
+
+    container_name: flask-container
+
+    ports:
+      - "5050:5050"
+
+    volumes:
+      - flask-data:/app/data
+
+volumes:
+  flask-data:
+
